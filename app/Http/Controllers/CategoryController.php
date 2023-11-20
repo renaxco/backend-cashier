@@ -21,6 +21,7 @@ class CategoryController extends Controller
    
     public function store(CategoryRequest $request)
     {
+        // return $request->all();
         try {
             $data = Category::create($request->all());
             return response()->json(['status'=>true, 'message'=>'input success','data'=> $data]);
